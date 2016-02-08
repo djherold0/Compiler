@@ -1,0 +1,11 @@
+DECLARE
+	a INT(3) := 0;
+BEGIN
+	WHILE a <= 100 LOOP
+		BEGIN
+			DBMS_OUTPUT.PUT_LINE(a);
+			a := a + 1
+		END;
+	END LOOP
+END;
+$

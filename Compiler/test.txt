@@ -1,0 +1,24 @@
+DECLARE
+	a POSITIVE(3) := 200;
+	b NUMBER(3) := 400;
+	c CHAR := 'c';
+	d BOOLEAN := TRUE;
+BEGIN
+	WHILE a < b LOOP
+		BEGIN
+			a:= a +  50;
+			DBMS_OUTPUT.PUT(a);
+			DBMS_OUTPUT.NEW_LINE;
+			DBMS_OUTPUT.PUT_LINE(d);
+			b	:= b - 50;
+			IF a=150 THEN
+				d := TRUE
+			END IF;
+			DBMS_OUTPUT.NEW_LINE
+		END;
+	END LOOP;
+	IF d <> FALSE THEN
+		DBMS_OUTPUT.PUT(d)
+	END IF
+END;
+$

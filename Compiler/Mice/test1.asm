@@ -1,0 +1,12 @@
+0 STO #0,,a
+1 JLE a,#100,#4
+2 STO #0,,T
+3 JMP ,,#5
+4 STO #1,,T
+5 JNE #1,T,#11
+6 SYS #-1,a,
+7 SYS #0,,
+8 ADD a,#1,temp1
+9 STO temp1,,a
+10 JMP ,,#1
+11 HLT ,,

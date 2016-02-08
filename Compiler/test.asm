@@ -1,0 +1,12 @@
+0 STO #25,,my_num
+1 JGT my_num,#5,#4
+2 STO #0,,T
+3 JMP ,,#5
+4 STO #1,,T
+5 JNE #1,T,#11
+6 SYS #-1,my_num,
+7 SYS #0,,
+8 SUB my_num,#5,temp1
+9 STO temp1,,my_num
+10 JMP ,,#1
+11 HLT ,,
